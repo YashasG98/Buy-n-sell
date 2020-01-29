@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def new
+    @user = User.new
   end
 
   def create
@@ -12,10 +13,9 @@ class UsersController < ApplicationController
     )
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "You have signed up successfully"
       redirect_to("/users/#{@user.id}/dashboard")
     else
-      render("signup")
+      render("/users/new")
     end
   end
 

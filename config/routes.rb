@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get   "products/add" => "products#add"
   get   "products/shop" => "products#list"
 
+  post  "logout" => "users#logout"
   post  "login" => "users#login"
   get   "signup" => "users#new"
   get   "login" => "users#login_form"

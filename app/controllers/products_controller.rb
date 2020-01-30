@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
     if @product.save
       @current_user.number_of_products += 1
       @current_user.save
-      redirect_to("/users/#{@current_user.id}/dashboard")
+      redirect_to("/users/dashboard")
     else
       render("products/add")
     end

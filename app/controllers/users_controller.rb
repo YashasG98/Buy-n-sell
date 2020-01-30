@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     )
     if @user.save
       session[:user_id] = @user.id
-      redirect_to("/users/#{@user.id}/dashboard")
+      redirect_to("/users/dashboard")
     else
       render("/users/new")
     end
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     if @user && @user.authenticate(params[:password])
       flash[:notice] = nil
       session[:user_id] = @user.id
-      redirect_to("/users/#{@user.id}/dashboard")
+      redirect_to("/users/dashboard")
     else
       flash[:alert] = "Invalid contact number/password combination"
       @contact = params[:contact]

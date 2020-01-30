@@ -1,7 +1,10 @@
 class OrdersController < ApplicationController
 
+  #to authenticate user before restricted access
   before_action :authenticate_user
 
+  #to create an order (to buy a product)
+  #request: POST
   def new
     prod_id = params[:id]
     product = Product.find_by(id: prod_id)
@@ -22,6 +25,8 @@ class OrdersController < ApplicationController
     end
   end
 
+  #get order history of the logged in user
+  #request: GET
   def list
     @orders = Order.where(user_id: @current_user.id)
   end

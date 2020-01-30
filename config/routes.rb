@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get   "orders/list" => "orders#list"
   post  "orders/:id/create" => "orders#new"
   post  "products/create" => "products#create"
   get   "products/add" => "products#add"

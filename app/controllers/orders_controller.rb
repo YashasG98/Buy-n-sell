@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
 
+  before_action :authenticate_user
+
   def new
     prod_id = params[:id]
     product = Product.find_by(id: prod_id)

@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   
+  before_action :authenticate_user
+
   def add
     @product = Product.new
   end
@@ -37,4 +39,8 @@ class ProductsController < ApplicationController
     @products = Product.where.not(user_id: @current_user.id)
   end
 
+  def self_products
+    @products = Product.where(user_id: @current_user.id)
+  end
+  
 end

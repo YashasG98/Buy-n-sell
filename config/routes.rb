@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  post  "admin/credit_wallet" => "users#credit"
+  get   "admin/credit" => "users#credit_form"
+
   get   "orders/list" => "orders#list"
   post  "orders/:id/create" => "orders#new"
   

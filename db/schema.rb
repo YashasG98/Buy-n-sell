@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_29_114212) do
+ActiveRecord::Schema.define(version: 2020_01_31_084436) do
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2020_01_29_114212) do
     t.string "address"
     t.integer "number_of_products"
     t.integer "wallet", default: 5000
+    t.boolean "admin", default: false
   end
 
 end

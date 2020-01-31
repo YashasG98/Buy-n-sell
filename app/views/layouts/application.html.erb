@@ -21,6 +21,9 @@
             <%= link_to("Add a product","/products/add",class: "nav-item nav-link") %>
             <%= link_to("Shop","/products/shop",class: "nav-item nav-link") %>
             <%= link_to("My orders","/orders/list",class: "nav-item nav-link") %>
+            <% if @current_user.admin == true %>
+              <%= link_to("Credit a user","/admin/credit",class: "nav-item nav-link") %>
+            <% end %>
             <%= link_to("Log out","/logout",{class: "nav-item nav-link",method:"post"}) %>
           <%else%>
             <%= link_to("Home","/",class: "nav-item nav-link") %>

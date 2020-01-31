@@ -65,6 +65,7 @@ Change the password (replace 'Game_server') at line 17 of config/database.yml to
 
 ```bash
 bundle install
+rails db:create
 rails db:migrate
 rails server
 ```
@@ -76,12 +77,12 @@ rails server
 * Shop from where user can buy objects
 * User can check products sold by him
 * User can check products bought by him
+* Admin can credit wallets
 * Appropriate error and success alerts have been added everywhere
 
 ### List of non-implemented/planned features
 
 * User profile page
-* Admin wallet control
 
 ### References used
 

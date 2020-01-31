@@ -15,6 +15,11 @@
   <%= link_to("/orders/list") do%>
   <button type="button" class="btn btn-primary btn-lg btn-block" style='margin-bottom:1vh;'>My orders</button>
   <%end%>
+  <% if @current_user.admin == true %>
+  <%= link_to("/admin/credit") do%>
+  <button type="button" class="btn btn-primary btn-lg btn-block" style='margin-bottom:1vh;'>Credit a user</button>
+  <%end%>
+  <% end %>
   <%= link_to("/logout",{method:"post"}) do%>
   <button type="button" class="btn btn-danger btn-lg btn-block">Log out</button>
   <%end%>

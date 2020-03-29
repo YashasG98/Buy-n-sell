@@ -83,8 +83,3 @@ rails server
 ### List of non-implemented/planned features
 
 * User profile page
-
-### References used
-
-* progate.com
-* Stack overflow

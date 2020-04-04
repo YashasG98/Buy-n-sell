@@ -1,4 +1,4 @@
-# Buy n' Sell for NITK
+# Buy n' Sell
 
 ### Installation steps
 
